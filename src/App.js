@@ -23,14 +23,14 @@ function App() {
 
   const handleSearch = async () => {
     console.log(teamName);
-    const response = await fetch(`http://localhost:8080/team/${teamName}`);
+    const response = await fetch(`https://nodejs-football-api.onrender.com/team/${teamName}`);
     const data = await response.json();
     console.log(data);
     setTeamData(data);
   };
 
   const handleTeamClick = async (teamName) => {
-    const response = await fetch(`http://localhost:8080/team/${teamName}`);
+    const response = await fetch(`https://nodejs-football-api.onrender.com/team/${teamName}`);
     const data = await response.json();
     setTeamData(data);
   };
